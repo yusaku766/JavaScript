@@ -43,10 +43,14 @@ let playerList = [
   },
 ];
 
+console.log(playerList[1].favorites[1]);
 console.log(playerList.find(player => player.favorites.includes('The Legend of Zelda')) ? 'The Legend of Zelda' : '');
 
 // Q5 四則演算
-let totalAge = playerList[0].age + playerList[1].age + playerList[2].age;
+let totalAge = 0;
+for (let i = 0; i < playerList.length; i++) {
+  totalAge += playerList[i].age;
+}
 let numberOfPlayers = playerList.length;
 let averageAge = totalAge / numberOfPlayers;
 
@@ -151,11 +155,8 @@ console.log(numbers);
 
 //Q5 if+for
 let mixed = [4, '2', 5, '8', '9', 0, 1];
-
-// 配列の長さを取得
 let length = mixed.length;
 
-// for ループを使用して各要素を処理
 for (let i = 0; i < length; i++) {
   let item = mixed[i];
 
@@ -166,7 +167,8 @@ for (let i = 0; i < length; i++) {
     else if(item % 2 === 1) {
       console.log(item + ' is odd');
     }
-  } else {
+    else {
     console.log(item + ' is not number');
+    }
   }
 }
