@@ -163,12 +163,10 @@ for (let i = 0; i < length; i++) {
   if (typeof item === 'number') {
     if (item % 2 === 0) {
       console.log(item + ' is even');
-    }
-    else if(item % 2 === 1) {
+    } else if(item % 2 === 1) {
       console.log(item + ' is odd');
-    }
-    else {
-    console.log(item + ' is not number');
+    } else {
+      console.log(item + ' is not number');
     }
   }
 }
